@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Top Recipes</a></li>
+                <li><a href="random.html">Surprise Me</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="saved.html">Saved</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Random Recipe</h1>
+        <div>
+            <label for="meal-type">Meal Type:</label>
+            <select id="meal-type">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+            <label for="prep-time">Preparation Time:</label>
+            <select id="prep-time">
+                <option value="15">15 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">1 hour</option>
+            </select>
+            <button id="random-button">Get Recipe</button>
+        </div>
+        <div id="random-recipe" class="recipes-container"></div>
+    </main>
+
+    <!-- Modal -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-recipe-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
